@@ -60,6 +60,17 @@ class MainContentArea(ft.Container):
         )
         self.content = self.chat
 
+class MainContentArea22(MainContentArea):
+    def __init__(self):
+        super().__init__(**main_style())
+        return {
+        "width": 420,
+        "height": 450,
+        "bgcolor": "#ebeefa",  
+        "border_radius": 10,
+        "padding": 15,
+    }     
+
 #Before pushing text to UI - create a class that generates the UI for the actual text prompts
 class CreateMessage(ft.Column):
     def __init__(self, name: str, message: str):
